@@ -1,0 +1,34 @@
+<h2>{{ appSettings.title }}</h2>
+<h4>CATEGORIES</h4>
+<!--Filter: <input type="text" ng-model="customerFilter.title" />
+<br /><br /> 
+<table>
+ <!--   <tr>
+        <th ng-click="doSort('title')">Name</th>
+        <th ng-click="doSort('content')">Content</th>
+        <th ng-click="doSort('price')">Total</th>
+        <th ng-click="doSort('joined')">Icon</th>
+        <th>&nbsp;</th>
+    </tr>
+    <tr ng-repeat="group in groups | filter:customerFilter | orderBy:sortBy:reverse">
+        <td>{{ group.title }}</td>
+        <td>{{ group.content }}</td>
+        <td>{{ group.items.length }} | {{ group.categories.length }}</td>
+        <td>{{ group.icon  }}</td>
+        <td><a href="#/orders/{{ group.id }}">View Orders</a></td>
+    </tr>
+</table>
+<br />  -->
+  
+<table ng-repeat="group in groups">
+<tr>
+   <th>
+        <h1>{{group.title}} <small>{{group.items.length - group.counter}} items <span ng-show="group.categories.length">{{group.categories.length}} sub-categories</span></small></h1>
+   </th>
+<tr>
+<tr>
+	<td><h4>{{group.content | uppercase}}  <a href="#/items/{{ group.id }}">View Items</a>
+	<span class="pull-right glyphicon glyphicon-{{group.icon}}"></span></h4></td>
+</tr> 
+</table>
+<footer><p>Version: {{ appSettings.version}}</p></footer>

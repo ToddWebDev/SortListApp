@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="sortListApp">
+<head>
+    <title>Iterating Over Data</title>
+       
+   <!-- Bootstrap core CSS -->
+	<link href="../my-bootstrap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <style>
+  	table {
+	  	width: 800px;   
+	}
+	th {
+    	text-align: left;
+		background-color: #efefef;
+		cursor: pointer;
+	}
+  </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col-md-12">
+			<div ng-view></div>
+		</div>
+		</div>
+	</div>
+		
+
+	
+
+    <script src="../my-bootstrap/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="scripts/jquery.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/categoriesController.js"></script>
+    <script src="controllers/itemsController.js"></script>
+    <script src="controllers/subitemsController.js"></script>
+    <script src="controllers/testController.js"></script>
+    <script src="services/groupsFactory.js"></script>
+    <script src="services/values.js"></script>
+   
+
+</body>
+</html>
