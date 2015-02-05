@@ -11,7 +11,7 @@
            $scope.group = groupsFactory.getGroup(groupId);
          }
   
-        
+          
         init();
     };
     

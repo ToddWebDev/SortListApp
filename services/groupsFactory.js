@@ -319,7 +319,7 @@
          	}
          	return {};      
         };
-
+       
 		factory.getCategory = function(categoryId){
 	    	 for (var i=0,len=categories.length;i<len;i++) {
                if (categories[i].id === parseInt(categoryId)) {

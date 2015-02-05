@@ -8,6 +8,22 @@
         <td>{{ item.title }}</td>
         <td>{{ item.price | currency }}</td>
     </tr>
+    <tr><td><!-- ADD ITEM FORM -->
+      <form name="addItem" ng-submit="addItem(group)">
+	      <input type="text" ng-model="item.title" class="form-control" id="newTitle" placeholder="Enter Item Name" ng-required="true">
+		  <input type="number" ng-model="item.price" class="form-control" id="newValue" placeholder="Enter Price" ng-required="true">
+		  <select ng-model="item.qty" class="form-control" ng-options="stars for stars in [1,2,3,4,5,6,7,8,9,10]"  title="No." id="newQty" ng-required="true"><option value="">Quantity</option></select>
+      </div>
+      <div class="form-group form-inline">
+      <button type="button" class="btn btn-default" ng-click="open($event)"><span class="glyphicon glyphicon-calendar"></span></button>					  	  <input type="text" ng-model="item.desc" class="form-control" id="newDesc" placeholder="Enter Notes">
+      </div>
+
+      <div class="form-group">
+      <button class="btn btn-success" type="submit" value="Submit">Add to Inventory</button>
+      </div>
+      </form>
+	  </td>
+	  </tr>
     
     <tr>	<th>Sub Categories</th>  </tr>
         <tr>
