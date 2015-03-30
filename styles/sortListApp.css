@@ -1,0 +1,211 @@
+/******************************************************
+*******************************************************
+*********  SORT LIST - MASTER STYLE SHEET  ************
+*************  BY TODD RIZZOLO 2015  ******************
+*******************************************************
+******************************************************/
+
+/* Font Embedding -----------------------------------*/
+@font-face {
+		font-family:"PT Sans";
+		src:url("../../fonts/PTsans/ptsans_regular/PTS55F-webfont.eot?") format("eot"),
+			url("../../fonts/PTsans/ptsans_regular/PTS55F-webfont.woff") format("woff"),
+			url("../../fonts/PTsans/ptsans_regular/PTS55F-webfont.ttf") format("truetype"),
+			url("../../fonts/PTsans/ptsans_regular/PTS55F-webfont.svg#ptsans_regular") format("svg");
+		font-weight:normal;
+		font-style:normal;
+		}
+@font-face {
+		font-family:"PT Sans Bold";
+		src:url("../../fonts/PTsans/ptsans_bold/PTS75F-webfont.eot?") format("eot"),
+			url("../../fonts/PTsans/ptsans_bold/PTS75F-webfont.woff") format("woff"),
+			url("../../fonts/PTsans/ptsans_bold/PTS75F-webfont.ttf") format("truetype"),
+			url("../../fonts/PTsans/ptsans_bold/PTS75F-webfont.svg#ptsans_bold") format("svg");
+		font-weight:normal;
+		font-style:normal;
+		}
+@font-face {
+		font-family:"PT Sans Narrow";
+		src:url("../../fonts/PTsans/ptsansnarrow_regular/PTN57F-webfont.eot?") format("eot"),
+			url("../../fonts/PTsans/ptsansnarrow_regular/PTN57F-webfont.woff") format("woff"),
+			url("../../fonts/PTsans/ptsansnarrow_regular/PTN57F-webfont.ttf") format("truetype"),
+			url("../../fonts/PTsans/ptsansnarrow_regular/PTN57F-webfont.svg#ptsansnarrow_regular") format("svg");
+		font-weight:normal;
+		font-style:normal;
+		}
+
+
+/* Universal ----------------------------------------*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important; }
+
+body {
+	  		font-family: 'PT Sans', Arial, sans-serif;
+	  		background: url("../../images/subtle_stripes/subtle_stripes.png") repeat fixed;
+  		}
+  		h1 {
+	  		font-family:  'PT Sans Bold', Arial, sans-serif;
+            font-size: 36px;
+			line-height: 1.1em;
+  		}
+    	.primary {
+			background-color: #f0f0f0;
+            border-top: 2px solid #f5f5f5;
+            margin-top: 5px;
+		}
+        .secondary {
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f9f9f9;
+        }
+		a:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+		.badge {
+			font-family: 'PT Sans Narrow', Arial, sans-serif;
+			text-indent: 0;
+            background: #9c9c9c;
+		}
+		.sub {
+			color: #808080;
+			background-color: #f0f0f0;
+/*			margin-right: 2px;*/
+		}
+		h5>label {
+			margin-bottom: -5px;
+		}
+		.btn-block {
+			margin-bottom: 5px;
+		}
+		i {
+			font-size: 20px;
+		}
+		blockquote {
+			line-height: .9em;
+			font-size: 12px;
+			background-color: #f5f5f5;
+			margin: 5px 0;
+            border-left: 3px solid #f5f5f5;           
+		}
+		.title {
+			background-color: #bd3535;
+			margin-top: -15px;
+			color: #fff;
+		}
+		.category {
+			background-color: #2471e3;
+			color: #fff;
+		}
+		.b {
+			border: 1px dashed blue;
+		}
+        a:hover {
+            color: #000;
+        }
+		accordian {
+			border-top: -10px;
+		}
+		ul {
+			list-style: none;
+		}
+		li {
+			line-height: 1.2em;
+		}
+		label {
+			font-weight: normal;
+		}
+		.ng-invalid.ng-dirty {
+			border-color: red;
+		}
+		.ng-valid.ng-dirty {
+			border-color: green;
+		}
+		.stack {
+			float: right;			
+		}
+		#newIcon {
+			width: 150px;
+			margin-top: 15px;
+		}
+		#newValue {
+			width: 120px;
+		}
+        .fill {
+            min-height: 98px;
+        }
+			
+/* Responsive Breakpoints ------------------------*/
+					
+		@media screen and (max-width:992px) {
+			.title {
+				height: 35px;
+				padding-top: 1px;
+				margin-top: -15px;
+			}
+			.category {
+				height: 35px;
+				padding-top: 1px;
+			}
+			input.search {
+				width: 120px;
+			}
+			#newDesc{
+				width: 140px;
+			}
+			
+		}
+		@media screen and (max-width: 765px) {
+			
+			h5 {
+				font-size: 12px;
+			}
+			form {
+				padding: 5px;
+				margin: 5px;
+			}
+			i {
+				margin: 5px;
+				padding: 5px;
+			}
+			form.no-form {
+			margin: 0 -5px;
+			}
+			.btn-block {
+				margin-bottom: 0;
+			}
+			#newValue {
+				width: 100%;
+			}
+			#newDesc {
+				width: 100%;
+			}
+			#newIcon {
+				margin-top: 0;
+				width: 100%;
+			}
+			.date {
+				width: 100%;
+			}
+		}
+		@media screen and (max-width: 560px) {
+			h1 {
+				font-size: 22px;
+			}
+			h5 {
+				font-size: 12px;
+			}
+			i {
+				font-size: 15px;
+			}
+			.no-show {
+				display: none;
+			}
+			.stack {
+				float: none;
+			}
+			
+		}
+    
+
+    	

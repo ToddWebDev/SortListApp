@@ -1,0 +1,33 @@
+<div class="col-md-9 primary">
+<h2>NEW ITEM <small>in {{category.title}}</small></h2>
+</div>
+<div class="col-md-9 {{group.context}}">
+<form>
+ <fieldset class="form-group">
+    <label for="title">Title</label>
+     <input class="form-control" type="text" id="title" name="title" ng-model="item.title" ng-required="true" placeholder="eg. Television, Dining Set, etc.">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="desc">Description</label>
+     <input class="form-control" type="text" id="desc" name="desc" ng-model="item.desc" placeholder="Enter Description">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="price">Price</label>
+        <input class="form-control" type="number" id="price" name="price" ng-model="item.price" placeholder="eg. 45.00">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="datePurch">Date Purchased</label>
+        <input class="form-control" type="text" id="datePurch" name="datePurch" ng-model="item.datePurch" placeholder="Enter Date">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="qty">Quantity</label>
+      <select ng-model="item.qty" class="form-control" ng-options="stars for stars in [1,2,3,4,5,6,7,8,9,10]"  title="Quantity" id="qty"><option value="">Quantity</option></select>
+    </fieldset>
+     <fieldset class="form-group">
+    <label for="value">Value</label>
+        <input class="form-control" type="number" id="value" name="value" ng-model="item.value" placeholder="Estimated Value eg. 12.00">
+    </fieldset>
+    
+    <input type="submit" value="Save" class="btn btn-info" ng-click="saveSubItem(item)" ng-disabled="isSubmitting">
+</form>
+    </div>

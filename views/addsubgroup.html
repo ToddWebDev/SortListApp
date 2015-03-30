@@ -1,0 +1,37 @@
+<h1>New Sub Category</h1>
+<form>
+ <fieldset class="form-group">
+    <label for="title">Title</label>
+     <input class="form-control" type="text" id="title" name="title" ng-model="category.title" placeholder="eg: Electronics, Tools, Pantry etc.">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="content">Location</label>
+     <input class="form-control" type="text" id="location" name="location" ng-model="category.location" placeholder=" eg: Living Room, Garage, Kitchen, etc.">
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="icon">Icon:
+        <span class="glyphicon glyphicon-{{category.icon}}"></span>
+        </label>
+      <select ng-model="category.icon" class="form-control" id="icon" ng-required="true">
+        	<option value="th">General</option>
+      		<option value="th-large">General-Large</option>
+      		<option value="phone-alt">Office</option>      		
+      		<option value="folder-open">Files</option>
+      		<option value="wrench">Tools</option>
+      		<option value="glass">Fragile</option>
+      		<option value="music">Music</option>
+      		<option value="film">Movies</option>
+	  		<option value="cutlery">Kitchen</option>	
+      		<option value="gift">Holiday</option>	  			
+	  		<option value="tasks">Tasks</option>		
+    		<option value="time">Time</option>
+      		<option value="inbox">Inbox</option>
+      		<option value="flag">Flag</option>
+      		<option value="picture">Picture</option>
+      		<option value="camera">Camera</option>
+      		<option value="tree-conifer">Outdoors</option>
+      </select>
+    </fieldset>
+    
+    <input type="submit" value="Save" class="btn btn-info" ng-click="saveSubGroup(category)" ng-disabled="isSubmitting">
+</form>

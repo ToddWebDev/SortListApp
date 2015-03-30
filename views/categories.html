@@ -1,5 +1,12 @@
-<h2>{{ appSettings.title }}</h2>
-<h4>CATEGORIES</h4>
+<div class="row">
+<div class="col-md-9">
+<h1>{{ appSettings.title }} <small>Get Organized</small> <a class="btn btn-default btn-sm pull-right" href=""><span class="glyphicon glyphicon-align-left"></span> New Project</a></h1>
+<h5><span class="glyphicon glyphicon-tasks"></span> a web app by <mark>@ToddWebDev</mark></h5>
+<h4>CATEGORIES <span class="badge">{{groups.length}}</span> <a class="btn btn-info btn-sm pull-right" href="#/new"><span class="glyphicon glyphicon-plus"></span> New Category</a> 
+</h4>
+    </div></div>
+
+
 <!--Filter: <input type="text" ng-model="customerFilter.title" />
 <br /><br /> 
 <table>
@@ -19,16 +26,14 @@
     </tr>
 </table>
 <br />  -->
-  
-<table ng-repeat="group in groups">
-<tr>
-   <th>
-        <h1>{{group.title}} <small>{{group.items.length - group.counter}} items <span ng-show="group.categories.length">{{group.categories.length}} sub-categories</span></small></h1>
-   </th>
-<tr>
-<tr>
-	<td><h4>{{group.content | uppercase}}  <a href="#/items/{{ group.id }}">View Items</a>
-	<span class="pull-right glyphicon glyphicon-{{group.icon}}"></span></h4></td>
-</tr> 
-</table>
+
+<div class="container-fluid"  ng-repeat="group in groups" ng-show="groups.length">
+<div class="row">
+<div class="col-md-9 primary">
+    <h1><sup ng-show="!group.items.length"><span class="badge">NEW</span></sup> {{group.title}} <span class="badge" ng-show="group.items.length">{{group.items.length}} items</span> <span class="badge" ng-show="group.categories.length">{{group.categories.length}} sub-categories</span><a class="btn btn-warning btn-xs pull-right" href="#/items/{{group.id}}/edit"><span class="glyphicon glyphicon-edit"></span>Edit</a></h1></div> 
+    </div>
+    <div class="row">
+        <div class="col-md-9 secondary {{group.context}}"><h4><a ng-show="!group.items.length" class="btn btn-success btn-sm" href="#/items/{{ group.id }}/new"><span class="glyphicon glyphicon-{{group.icon}}"></span> Add Items</a> <a ng-show="group.items.length" class="btn btn-default btn-sm" href="#/items/{{ group.id }}"><span class="glyphicon glyphicon-{{group.icon}}"></span> View Items</a> {{group.content | uppercase}}{{group.value}}</h4></div>
+    </div></div>
+
 <footer><p>Version: {{ appSettings.version}}</p></footer>
