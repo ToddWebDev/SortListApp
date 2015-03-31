@@ -10,13 +10,9 @@
             //Search the groups for the groupId
            $scope.group = groupsFactory.getGroup(groupId);
          }
-        
+  
+          
         init();
-        
-//        console.log($scope.group.items[1]);
-        $scope.deleteItem = function(itemId){
-    groupsFactory.removeItem(itemId, groupId);      
-  }
     };
     
     ItemsController.$inject = ['$scope', '$routeParams','groupsFactory'];

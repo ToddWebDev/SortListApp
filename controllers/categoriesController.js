@@ -6,10 +6,6 @@
         $scope.groups = [];
         $scope.appSettings = appSettings;
         
-        $scope.saveGroup = function(group){
-            $scope.group = groupsFactory.saveGroup(group);
-        }
-        
         function init(){
 	       $scope.groups = groupsFactory.getGroups();   
         }

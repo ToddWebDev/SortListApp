@@ -1,12 +1,21 @@
 <!doctype html>
 <html ng-app="sortListApp">
 <head>
-    <title>Sorting &amp; Listing App |  Get Organized </title>
+    <title>Iterating Over Data</title>
        
-   <!-- STYLES -->
-	<link href="styles/bootstrap.css" rel="stylesheet">
-	<link href="styles/sortListApp.css" rel="stylesheet">
-
+   <!-- Bootstrap core CSS -->
+	<link href="../my-bootstrap/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+  <style>
+  	table {
+	  	width: 800px;   
+	}
+	th {
+    	text-align: left;
+		background-color: #efefef;
+		cursor: pointer;
+	}
+  </style>
 </head>
 <body>
 	<div class="container-fluid">
@@ -18,27 +27,17 @@
 	</div>
 		
 
-<!--	VENDORS  -->
-    <script src="vendor/jquery-2.1.3.min.js"></script>
-    <script src="vendor/bootstrap.min.js"></script>
-    <script src="vendor/angular.js"></script>
-    <script src="vendor/angular-route.js"></script>
-<!--    APPS  -->
+	
+
+    <script src="../my-bootstrap/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="scripts/jquery.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
     <script src="app.js"></script>
-<!--    CONTROLLERS  -->
     <script src="controllers/categoriesController.js"></script>
     <script src="controllers/itemsController.js"></script>
     <script src="controllers/subitemsController.js"></script>
-    <script src="controllers/createSubItemsController.js"></script>
-    <script src="controllers/createItemController.js"></script>
     <script src="controllers/testController.js"></script>
-    <script src="controllers/createGroupController.js"></script>
-    <script src="controllers/createSubGroupController.js"></script>
-    <script src="controllers/editItemController.js"></script>
-    <script src="controllers/editSubItemController.js"></script>
-    <script src="controllers/editGroupController.js"></script>
-    <script src="controllers/editSubGroupController.js"></script>
-<!--    SERVICES  -->
     <script src="services/groupsFactory.js"></script>
     <script src="services/values.js"></script>
    

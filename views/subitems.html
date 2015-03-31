@@ -1,42 +1,11 @@
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-9 primary">
-    <h2><span class="glyphicon glyphicon-{{category.icon}}"></span> {{ category.title | uppercase }} <!--Conditional Operator --><small>  {{category.location | uppercase}}</small>  <sup><span class="badge">{{category.items.length}}</span></sup>   <a class="btn btn-info btn-sm pull-right" href="#/items/{{group.id}}/subitems/{{category.id}}/new"><span class="glyphicon glyphicon-plus"></span> New Item</a></h2>
-    <p><span class="glyphicon glyphicon-folder-open"></span> <a href="#/">Categories/</a><a href="#/items/{{group.id}}">{{group.title}}/</a><span class="badge">{{category.title}}</span></p>
-</div>
-<div class="col-md-3 primary fill hidden-xs"></div></div>
-<div class="row">
-<div class="col-md-9 {{group.context}}">
-        <ul class="list-inline">
-    	      	<li><h5><span class="no-show">Sort by: </span><select ng-model="orderProp">
-				  	<option value="title">Alphabetical</option>
-				  	<option value="price">Price: Low>High</option>
-				  	<option value="-price">Price: High>low</option>
-				  </select></h5></li>
-				<li class="pull-right"><h5><span class="glyphicon glyphicon-search"></span> <input class="search" ng-model="query" placeholder="Search"></h5></li>
-			  </ul>
-<div class="col-md-6" ng-repeat="item in category.items | filter:query | orderBy:orderProp" ng-show="category.items.length">
-			   <ul ng-hide="item.trash">
-				<h4><span ng-show="item.favorite" class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> {{item.title}}<span class="badge pull-right">{{item.qty}}</span></h4>
-				  <blockquote>
-					  <li class="stack clear-fix"><strong>Purchased on</strong> {{item.datePurch | date:'longDate'}}</li>
-					  <li><strong>Price:</strong> {{item.price | currency}}</li>				
-					  <li class="stack clear-fix"><strong>Est. Value:</strong> {{item.value | currency}}</li>
-					  <li><strong>Description:</strong> {{item.desc}}</li>
-				  </blockquote>
-				  <li>
-<div class="row">
-<div class="col-xs-6 col-md-6">
-				 <button class="btn btn-success btn-xs btn-block" ng-click="item.favorite =!item.favorite" title="Mark as Favorite">
-    <span class="glyphicon glyphicon-star" aria-hidden="true"></span></button><a class="btn btn-warning btn-xs btn-block" href="#/items/{{group.id}}/subitems/{{category.id}}/edit/{{item.id}}" title="Edit Item"><span class="glyphicon glyphicon-edit"></span></a></div>
-<div class="col-xs-6 col-md-6"><button class="btn btn-info btn-xs btn-block" ng-click="" title="Add Pictures">
-				  <span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
-				  <form name="count" ng-submit="sorter.count(group)" class="no-form">
-				  <button class="btn btn-danger btn-xs btn-block" ng-click="deleteSubItem(item.id)" title="Trash Item">
-				  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-    </form></div></div>
-				  </li> 
-                </ul>
-    </div></div>
-<div class="col-md-3 sub"></div>
-    </div>
+<h2>{{ categories.title }}</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+     <tr ng-repeat="item in items">
+	    <td>{{ item.title }}</td>
+	    <td>{{ item.desc }}</td>
+    </tr>
+</table>

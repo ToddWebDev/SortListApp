@@ -1,47 +1,39 @@
-<div class="container-fluid">
-<div class="row">
-<div class="col-md-9 primary">
-    <h2><span class="glyphicon glyphicon-{{group.icon}}"></span> {{ group.content | uppercase }} <!--Conditional Operator -->  <sup><span class="badge">{{group.items.length}}</span></sup>   <a class="btn btn-info btn-sm pull-right" href="#/items/{{group.id}}/new"><span class="glyphicon glyphicon-plus"></span> New Item</a></h2>
-    <p><span class="glyphicon glyphicon-folder-open"></span> <a href="#/">Categories/</a><span class="badge">{{group.title}}</span></p>
-</div>
-<div class="col-md-3 primary fill hidden-xs"></div></div>
-<div class="row">
-<div class="col-md-9 {{group.context}}">
-        <ul class="list-inline">
-    	      	<li><h5><span class="no-show">Sort by: </span><select ng-model="orderProp">
-				  	<option value="title">Alphabetical</option>
-				  	<option value="price">Price: Low>High</option>
-				  	<option value="-price">Price: High>low</option>
-				  </select></h5></li>
-				<li class="pull-right"><h5><span class="glyphicon glyphicon-search"></span> <input class="search" ng-model="query" placeholder="Search"></h5></li>
-			  </ul>
-<div class="col-md-6" ng-repeat="item in group.items | filter:query | orderBy:orderProp" ng-show="group.items.length">
-			   <ul>
-				<h4><span ng-show="item.favorite" class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> {{item.title}}<span class="badge pull-right">{{item.qty}}</span></h4>
-				  <blockquote>
-					  <li class="stack clear-fix"><strong>Purchased on</strong> {{item.datePurch | date:'longDate'}}</li>
-					  <li><strong>Price:</strong> {{item.price | currency}}</li>				
-					  <li class="stack clear-fix"><strong>Est. Value:</strong> {{item.value | currency}}</li>
-					  <li><strong>Description:</strong> {{item.desc}}</li>
-				  </blockquote>
-				  <li>
-<div class="row">
-<div class=" col-xs-6 col-md-6">
-				 <button class="btn btn-success btn-xs btn-block" ng-click="item.favorite =!item.favorite" title="Mark as Favorite">
-    <span class="glyphicon glyphicon-star" aria-hidden="true"></span></button><a class="btn btn-warning btn-xs btn-block" href="#/items/{{ group.id }}/edit/{{item.id}}" title="Edit Item"><span class="glyphicon glyphicon-edit"></span></a></div>
-<div class="col-xs-6 col-md-6"><button class="btn btn-info btn-xs btn-block" ng-click="" title="Add Pictures">
-				  <span class="glyphicon glyphicon-picture" aria-hidden="true"></span></button>
-				  <form name="count" ng-submit="sorter.count(group)" class="no-form">
-				  <button class="btn btn-danger btn-xs btn-block" ng-click="deleteItem(item.id)" title="Trash Item">
-				  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-    </form></div></div>
-				  </li> 
-                </ul>
-    </div></div>
-<div class="col-md-3 sub">
-    <h2>Sub Categories <sup ng-show="group.categories.length"><span class="badge">{{group.categories.length}}</span></sup> <a class="btn btn-info btn-xs pull-right" href="#/subitems/{{group.id}}/new"><span class="glyphicon glyphicon-plus"></span> New</a></h2>
-    <table class="table table-condensed" ng-repeat="category in group.categories">
-        <tr><td><sup ng-show="!category.items.length"><span class="badge">NEW</span></sup> <span class="glyphicon glyphicon-{{category.icon}}"></span> {{ category.title }} | {{ category.location }}  <span ng-show="category.items.length" class="badge">{{category.items.length}} Items</span><a class="btn btn-warning btn-xs pull-right" href="#/subitems/{{group.id}}/edit/{{category.id}}"><span class="glyphicon glyphicon-edit"></span>Edit</a></td></tr>
-    <tr><td><a ng-show="!category.items.length" class="btn btn-success btn-block btn-sm" href="#/items/{{ group.id }}/subitems/{{ category.id }}/new">Add Sub-Items</a><a ng-show="category.items.length" class="btn btn-info btn-block btn-sm" href="#/items/{{ group.id }}/subitems/{{ category.id }}">View Sub-Items</a></td></tr></table>
-    </div>
-    </div>
+<h2>{{ group.content }}</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Total</th>
+    </tr>
+    <tr ng-repeat="item in group.items">
+        <td>{{ item.title }}</td>
+        <td>{{ item.price | currency }}</td>
+    </tr>
+    <tr><td><!-- ADD ITEM FORM -->
+      <form name="addItem" ng-submit="addItem(group)">
+	      <input type="text" ng-model="item.title" class="form-control" id="newTitle" placeholder="Enter Item Name" ng-required="true">
+		  <input type="number" ng-model="item.price" class="form-control" id="newValue" placeholder="Enter Price" ng-required="true">
+		  <select ng-model="item.qty" class="form-control" ng-options="stars for stars in [1,2,3,4,5,6,7,8,9,10]"  title="No." id="newQty" ng-required="true"><option value="">Quantity</option></select>
+      </div>
+      <div class="form-group form-inline">
+      <button type="button" class="btn btn-default" ng-click="open($event)"><span class="glyphicon glyphicon-calendar"></span></button>					  	  <input type="text" ng-model="item.desc" class="form-control" id="newDesc" placeholder="Enter Notes">
+      </div>
+
+      <div class="form-group">
+      <button class="btn btn-success" type="submit" value="Submit">Add to Inventory</button>
+      </div>
+      </form>
+	  </td>
+	  </tr>
+    
+    <tr>	<th>Sub Categories</th>  </tr>
+        <tr>
+        <th>Name</th>
+        <th>Location</th>
+    </tr>
+    <tr ng-repeat="category in group.categories">
+	    <td>{{ category.title }}</td>
+	    <td>{{ category.location }}</td>
+	    <td>  <a href="#/subitems/{{ category.id }}">View Sub-Items</a></td>
+    </tr>
+    
+</table>

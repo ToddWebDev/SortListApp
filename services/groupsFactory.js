@@ -5,20 +5,19 @@
       id: 1,
       title: 'Home',
       content: 'Valuables at Home',
-      subGroups: 4,
-      count: 5,
+      subGroups: 0,
+      quantity: 0,
       notes: '',
       tags: '',
       icon: 'home',
-      context: 'bg-danger',
-      categoryCount: 4,
+      counter: 0,
       categories: [
       		{
 	      		id: 1,
       			title: 'Tools',
       			location: 'Garage',
       			icon: 'wrench',
-      			count: 2,
+      			counter: 0,
       			items: [
       				{
 	      			id: 1,
@@ -27,7 +26,7 @@
 	      			price: 299,
 	      			datePurch: '2003-03-17',
 	      			qty: 1,
-	      			value: 299	
+	      			value: '299 '	
 		  			},
 		  			{
 			  		id: 2,
@@ -45,19 +44,19 @@
       			title: 'Electronics',
       			location: 'Home',
       			icon: 'off',
-      			count: 2,
+      			counter: 0,
       			items: [
       				{
-	      			id: 1,
+	      			id: 3,
 	      			title: 'Samsung HD TV',
 	      			desc: '52in LED',
 	      			price: 2500,
 	      			datePurch: '2011-02-11',
 	      			qty: 1,
-	      			value: 0,	
+	      			value: '    '	
 		  			},
 		  			{
-			  		id: 2,
+			  		id: 4,
 			  		title: 'Playstation 4',
 			  		desc: '',
 			  		price: 399,
@@ -72,34 +71,34 @@
 		  		title: 'Furniture',
 		  		location: 'Home',
 		  		icon: 'book',
-		  		count: 3,
+		  		counter: 0,
 		  		items: [
 		  			{
-			  		id: 1,
+			  		id: 5,
 			  		title: 'BookCase with doors',
 			  		desc: '',
 			  		price: 150,
 			  		datePurch: '2013-05-05',
 			  		qty: 1,
-			  		value: 150
+			  		value: ''
 		  			},
 		  			{
-			  		id: 2,
+			  		id: 6,
 			  		title: 'End Table with drawer',
 			  		desc: '',
 			  		price: 99,
 			  		datePurch: '',
 			  		qty: 4,
-			  		value: 50
+			  		value: ''
 		  			},
 		  			{
-			  		id: 3,
+			  		id: 7,
 			  		title: 'Queen Matress & Boxspring',
 			  		desc: 'includes bed frame and headboard',
 			  		price: 9500,
 			  		datePurch: '',
 			  		qty: 1,
-			  		value: 500		  			}
+			  		value: ''		  			}
 		  		]	
 	  		},
 	  		{
@@ -107,25 +106,25 @@
 		  		title: 'Decorations',
 		  		location: 'Home',
 		  		icon: 'picture',
-		  		count: 2,
+		  		counter: 0,
 		  		items: [
 		  			{
-			  		id: 1,
+			  		id: 8,
 			  		title: 'Large Mirror',
 			  		desc: 'various sizes and styles',
 			  		price: 99,
 			  		datePurch: '',
 			  		qty: 3,
-			  		value: 50
+			  		value: ''
 		  			},
 		  			{
-			  		id: 2,
+			  		id: 9,
 			  		title: 'Clock',
 			  		desc: '',
 			  		price: 200,
 			  		datePurch: '2002-07-04',
 			  		qty: 2,
-			  		value: 75
+			  		value: ''
 		  			}
 		  		]
 	  		}
@@ -133,8 +132,7 @@
 	  			],
 	  items: [
       		{
-		  		id: 1,
-                title: 'Apple MacBook Pro',
+		  		title: 'Apple MacBook Pro',
 		  		desc: '13in Macbook Pro',
 		  		price: 2100,
 		  		datePurch: '2010-10-31',
@@ -142,8 +140,7 @@
 		  		value: 700,
 		  	},
 		  	{
-			  	id: 2,
-                title: 'iPad Air',
+			  	title: 'iPad Air',
 			  	desc: '32gb Space Black',
 			  	price: 850,
 			  	datePurch: '2012-07-15',
@@ -152,8 +149,7 @@
 
 			 },
 			 {
-				 id: 3,
-                 title: 'Havertys Chase Sofa',
+				 title: 'Havertys Chase Sofa',
 				 desc: '8ft Brown Leather with 4ft chase',
 				 price: 4000,
 				 datePurch: '2004-02-21',
@@ -162,8 +158,7 @@
 
 			 },
 			 {
-                id: 4,
-                title: 'Guitar - CF MARTIN',
+			 	title: 'Guitar - CF MARTIN',
 			 	desc: 'EX1100 Dreadnought',
 			 	price: 1200,
 			 	datePurch: '2012-05-25',
@@ -172,8 +167,7 @@
 
 			 },
 			 {
-				 id: 5,
-                 title: 'Golf Clubs',
+				 title: 'Golf Clubs',
 				 desc: 'Taylor Made Complete Set w/ bag',
 				 price: 599,
 				 datePurch: '2009-07-01',
@@ -186,32 +180,31 @@
 	  id: 2,
       title: 'Storage',
       content: 'Valuables in Storage',
-      subGroups: 1,
-      count: 3,
+      subGroups: 0,
+      quantity: 0,
       notes: '',
       tags: '',
       icon: 'folder-close',
-      context: 'bg-info',
-      categoryCount: 1,
+      counter: 0,
       categories: [
 	 		{
 		 		id: 5,
       			title: 'Barn',
       			location: 'Backyard',
       			icon: 'tree-deciduous',
-      			count: 2,
+      			counter: 0,
       			items: [
       				{
-	      			id: 1,
+	      			id: 10,
 	      			title: 'Christmas Tree & Lights',
 	      			desc: 'Holiday Decorations, etc.',
 	      			price: 450,
 	      			datePurch: '1995-11-15',
 	      			qty: 1,
-	      			value: -300 	
+	      			value: 'priceless' 	
 		  			},
 		  			{
-			  		id: 2,
+			  		id: 11,
 			  		title: 'Mountain Bikes',
 			  		desc: 'from that summer we got into bike riding',
 			  		price: 300,
@@ -224,8 +217,7 @@
 	  			],
       items: [
   	    	{
-	  			id: 1,
-                title: 'Patio Furniture',
+	  			title: 'Patio Furniture',
 	  			desc: 'Table, Umprella, 4 chairs',
 	  			price: 400,
 	  			datePurch: '2008-03-23',
@@ -233,8 +225,7 @@
 
 	  		},
 	  		{
-		  		id: 2,
-                title: 'Dirt Bike',
+		  		title: 'Dirt Bike',
 		  		desc: 'Suzuki 200cc',
 		  		price: 1400,
 		  		datePurch: '2009-09-14',
@@ -242,8 +233,7 @@
 		  		value: 900
 		  	},
 		  	{
-			  	id: 3,
-                title: 'Lawnmower',
+			  	title: 'Lawnmower',
 			  	desc: 'John Deer Gas Push Mower',
 			  	price: 650,
 			  	datePurch: '1999-06-02',
@@ -257,23 +247,22 @@
 	  id: 3,
       title: 'Work',
       content: 'Valuables at Work',
-      subGroups: 1,
-      count: 2,
+      subGroups: 0,
+      quantity: 0,
       notes: '',
       tags: '',
       icon: 'briefcase',
-      context: 'bg-warning',
-      categoryCount: 1,
+      counter: 0,
       categories: [
 	 		{
 		 		id: 6,
       			title: 'Checked Out',
       			location: 'Work',
       			icon: 'inbox',
-      			count: 2,
+      			counter: 0,
       			items: [
       				{
-	      			id: 1,	
+	      			id: 12,	
 	      			title: 'iPad mini',
 	      			desc: 'PROPERTY OF RON SWANSON',
 	      			price: 0,
@@ -282,7 +271,7 @@
 	      			value: 550	
 		  			},
 		  			{
-			  		id: 2,
+			  		id: 13,
 			  		title: 'Label Maker',
 			  		desc: 'Borrowed from Dwight',
 			  		price: 0,
@@ -295,21 +284,19 @@
 	  			],
       items: [
       		{
-      			id: 1,
-                title: 'Seagate Wireless',
+      			title: 'Seagate Wireless',
       			desc: '1tb wireless external harddrive',
       			price: 200,
       			datePurch: '2012-09-13',
       			qty: 2
       		},
       		{
-	      		id: 2,
-                title: '2005 Dundie Award',
+	      		title: '2005 Dundie Award',
 	      		desc: 'Finest Work, Hottest In The Office',
 	      		price: 0,
 	      		datePurch: '2005-09-20',
 	      		qty: 2,
-	      		value: 9000
+	      		value: '9000'
       		}
       		]
     		}   
@@ -317,160 +304,33 @@
         
         var factory = {};
         
-    // INDEX SERVICES // NEEDS WORK // NOT OPTIMAL 
-    
-        var count = 3;
-        
-    factory.getCount = function(){
-            count++;
-            return count;
-        };
-    
-    factory.getCategoryCount = function(groupId){
-        groupId--;
-        if( groups[groupId].count != null){
-        groups[groupId].categoryCount++;
-        }else{ groups[groupId].categoryCount = 1; }
-        return groups[groupId].categoryCount;
-    };
-        
-    factory.getItemCount = function(groupId){
-        groupId--;
-        if( groups[groupId].count != null){
-            groups[groupId].count++;
-        }else{ groups[groupId].count = 1; }
-        return groups[groupId].count;
-    };
-        
-    factory.getSubItemCount = function(groupId, categoryId){
-        groupId--;
-        categoryId--;
-     console.log(groups[groupId].categories[categoryId].title);
-        groups[groupId].categories[categoryId].count++;
-        return groups[groupId].categories[categoryId].count;   
-    };
-        
-    // GROUP SERVICES  
-
-    factory.getGroups = function(){
+        factory.getGroups = function(){
 	        return groups;
-        };  
-    
-    factory.getGroup = function(groupId){
+        };
+        
+        factory.getGroup = function(groupId){
 	    	 for (var i=0,len=groups.length;i<len;i++) {
                if (groups[i].id === parseInt(groupId)) {
+	               //items must go before groups/categories...??
 				   return groups[i];
+                   //$scope.categories = $scope.groups[i].categories;
+                   //$scope.groups = $scope.groups[i];
                }
          	}
          	return {};      
         };
-        
-     factory.saveGroup = function(group, id){
-         group.items = [];
-         group.categories = [];
-         group.context = 'bg-success';
-         group.id = id;
-         groups.push(group);
-        };
-        
-    factory.removeGroup = function(groupId){
-        for(var i=0, l=groups.length; i < l; i++){
-            if(groups[i].id === parseInt(groupId)){
-                console.log(groups[i].title);
-                groups[i].splice(i, 1);
-            }
-        }
-    };
-    
-//     factory.getGroupIndex = function(groupId){
-//        for (var i=0,len=groups.length;i<len;i++) {
-//             if (groups[i].id === parseInt(groupId)) {
-//              return groups.indexOf("Apple");   
-//             }
-//        }
-//     };
-   
-    // ITEM SERVICES
-        
-     factory.getItem = function(groupId, itemId){
-	    	 for 
-        (var i=0,len=groups[groupId].items.length;i<len;i++) {
-               if (groups[groupId].items[i].id === parseInt(itemId)) {
-				   return groups[groupId].items[i];
-               }
-         	}
-         	return {};      
-        };
-              
-     factory.saveItem = function(item, groupId){
-            groupId--;
-            groups[groupId].items.push(item);
-            item = {};
-        
-        };
-        
-    factory.removeItem = function(itemId, groupId){
-       groupId--;
-    for(var i=0, l=groups[groupId].items.length; i < l; i++) {
-      if(groups[groupId].items[i].id === parseInt(itemId)){
-        console.log(groups[groupId].items[i]);
-        groups[groupId].items.splice(i, 1);
-      }
-    }
-  };
-
-// CATEGORY AND SUBITEM RESOURCES
        
-		factory.getCategory = function(groupId, categoryId){
-            groupId--;
- for (var i=0,len=groups[groupId].categories.length;i<len;i++) {
-  if (groups[groupId].categories[i].id === parseInt(categoryId)) {
-				   return groups[groupId].categories[i];
+		factory.getCategory = function(categoryId){
+	    	 for (var i=0,len=categories.length;i<len;i++) {
+               if (categories[i].id === parseInt(categoryId)) {
+	               //items must go before groups/categories...??
+				   return categories[i];
+                   //$scope.categories = $scope.groups[i].categories;
+                   //$scope.groups = $scope.groups[i];
                }
          	}
          	return {};      
         };
-        
-    factory.saveSubGroup = function(category, id, groupId){
-         groupId--;
-         category.items = [];
-         category.id = id;
-         groups[groupId].categories.push(category);
-        };
-        
-        factory.getSubItem = function(groupId, categoryId, itemId){
-	        groupId--;
-	        categoryId--;
-	        console.log(groupId);
-	        console.log(categoryId);
-	        console.log(itemId);
-	        	for 
-        (var i=0,len=groups[groupId].categories[categoryId].items.length;i<len;i++) {
-               if (groups[groupId].categories[categoryId].items[i].id === parseInt(itemId)) {
-				   return groups[groupId].categories[categoryId].items[i];
-               }
-         	}
-         	return {};   
-        };
-        
-        factory.saveSubItem = function(item, groupId, categoryId){
-           groupId--;
-           categoryId--;
-            groups[groupId].categories[categoryId].items.push(item);
-            item = {}
-        };
-        
-    factory.removeSubItem = function(itemId, groupId, categoryId){
-        groupId--;
-        categoryId--;
-        for(var i=0, l=groups[groupId].categories[categoryId].items.length; i < l; i++) {
-      if(groups[groupId].categories[categoryId].items[i].id === parseInt(itemId)){
-        console.log(groups[groupId].categories[categoryId].items[i]);
-        groups[groupId].categories[categoryId].items.splice(i, 1);
-      } 
-       }
-        };
- 
 
         
         return factory;
