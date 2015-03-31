@@ -1,0 +1,35 @@
+<div class="col-md-9 primary">
+<h2>EDIT {{item.title}} <small>in {{category.title}}</small></h2>
+</div>
+<div class="col-md-9 {{group.context}}">
+<form>
+ <fieldset class="form-group">
+    <label for="title">Title</label>
+     <input class="form-control" type="text" id="title" name="title" ng-model="item.title" ng-required="true">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="desc">Description</label>
+     <input class="form-control" type="text" id="desc" name="desc" ng-model="item.desc">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="price">Price</label>
+        <input class="form-control" type="number" id="price" name="price" ng-model="item.price" placeholder="eg. 45.00">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="datePurch">Date Purchased</label>
+        <input class="form-control" type="text" id="datePurch" name="datePurch" ng-model="item.datePurch">
+    </fieldset>
+    <fieldset class="form-group">
+    <label for="qty">Quantity</label>
+      <select ng-model="item.qty" class="form-control" ng-options="stars for stars in [1,2,3,4,5,6,7,8,9,10]"  title="Quantity" id="qty" ng-required="true"><option value="">Quantity</option></select>
+    </fieldset>
+     <fieldset class="form-group">
+    <label for="value">Value</label>
+        <input class="form-control" type="number" id="value" name="value" ng-model="item.value">
+    </fieldset>
+    
+    <a href="#/items/{{ group.id }}/subitems/{{ category.id }}" class="btn btn-info"  ng-disabled="isSubmitting">Save</a>
+   <button class="btn btn-danger" ng-click="deleteSubItem()" title="Trash Item"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</button>
+
+</form>
+    </div>
